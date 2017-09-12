@@ -1,0 +1,636 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 20, 2016, 3:43:56 AM
+    Author     : sotig
+*/
+
+input[type="text"], textarea, input[type="password"], input[type="email"]{ 
+    color:#000;
+    padding:3px; 
+    outline: none; 
+    background-color: transparent;  
+    border: 0px solid;
+    border-bottom: 1px solid #a93f18; 
+    transition: all .3s linear;
+    font-family:  Segoe UI, Arial;
+}
+input[type="text"]:hover, textarea:hover,input[type="password"]:hover,  input[type="email"]:hover {
+    transition: all .3s linear;
+    border-bottom-color:  #a32c00; 
+}
+input[type="text"]:active, textarea:active,input[type="password"]:active,  input[type="email"]:active {
+    outline: none;
+}
+input[type="text"]:focus, textarea:focus,input[type="password"]:focus,  input[type="email"]:focus {
+    background-color: #fff;  
+
+    border-bottom-color:  #a32c00; 
+    transition: all .3s linear;
+    outline: none;
+}
+
+input[type=checkbox]:not(old),
+input[type=radio   ]:not(old){
+    width   : 18px;
+    margin  : 0;
+    padding : 0;
+    opacity : 0;
+}
+
+input[type=radio   ]:not(old) + label{
+    display      : inline-block;
+    margin-left  : -18px;
+    padding-left : 18px;
+    background   : url('/img/radio.png') no-repeat 0 0; 
+    line-height  : 16px; 
+    width: 16px;
+    height: 16px;
+    white-space: nowrap; 
+    
+    -webkit-touch-callout: none;  
+    -webkit-user-select: none; 
+    -khtml-user-select: none;  
+    -moz-user-select: none;  
+    -ms-user-select: none; 
+    user-select: none; 
+}
+input[type=radio   ]:not(old):hover + label{
+    background   : url('/img/radio.png') no-repeat 0 -16px;
+}
+input[type=radio   ]:not(old):checked + label{
+    background   : url('/img/radio.png') no-repeat 0 -32px;
+}
+
+input[type=checkbox   ]:not(old) + label{
+    display      : inline-block;
+    margin-left  : -18px;
+    padding-left : 18px;
+    background   : url('/img/radio.png') no-repeat 0 0; 
+    line-height  : 16px; 
+    width: 16px;
+    height: 16px;
+    white-space: nowrap; 
+
+    -webkit-touch-callout: none;  
+    -webkit-user-select: none; 
+    -khtml-user-select: none;  
+    -moz-user-select: none;  
+    -ms-user-select: none; 
+    user-select: none; 
+}
+input[type=checkbox   ]:not(old):hover + label{
+    background   : url('/img/check.png') no-repeat 0 -16px;
+}
+input[type=checkbox   ]:not(old):checked + label{
+    background   : url('/img/check.png') no-repeat 0 -32px;
+}
+
+input[type="button"], .button{ 
+    padding: 2px 5px 2px 5px; 
+    color:#fff;
+    font-weight: bold;
+    background: #0a1b35; 
+    background: radial-gradient(at 1px 1px, #e96836 0%,#a32c00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+    border:1px solid #a32c00; 
+    font-size: 13px; 
+    outline: none; 
+}
+
+input[type="button"]:hover, .button:hover{
+    background: radial-gradient(at 1px 1px, #ec6f3e 0%,#b1380d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    border:1px solid #a32c00; 
+    transition: all .3s ease; 
+
+}
+
+input[type="button"]:active, .button:active{  
+    transition: all 0s ease;
+    background: #a32c00; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ 
+
+}
+a{
+    outline: none;
+    color:#e86a20;
+    text-decoration: none;
+}
+a:hover{
+    color:#d47f60; 
+    text-decoration:underline; 
+}
+.ribbon{
+    padding:6px;
+    color: #fff;  
+
+    background: #a32c00;   
+    min-height:15px;
+    font-size: 12px;
+    text-transform: uppercase; 
+    font-weight: bold;
+} 
+
+.noselect {
+    -webkit-touch-callout: none;  
+    -webkit-user-select: none; 
+    -khtml-user-select: none;  
+    -moz-user-select: none;  
+    -ms-user-select: none; 
+    user-select: none; 
+}
+
+.winel {
+
+    position: absolute;
+    border: 1px solid #a93f18;
+
+
+}
+
+.winel[focus="true"] { 
+    border: 1px solid #a93f18; 
+}
+
+.winel[focus="true"] .titel {
+    background: #a32c00;   
+}
+
+.titel { 
+    background: #fff;   
+    height: 25px;
+    padding-left: 5px;
+    line-height: 25px;
+    cursor: default; 
+}
+
+.titlab {
+    font-family: 'Segoe UI', Calibri;
+    font-size: 10pt;
+    color: #FFF; 
+}
+
+.titleclosebtn {
+    pointer-events: visibleFill; 
+    font-family: 'Segoe UI', Calibri;
+    font-size: 10pt;
+    line-height: 15pt;
+    background:url('/img/ics.png');
+    background-repeat:no-repeat;
+    background-size:512px 512px;
+    background-position:-12px 0px; 
+
+    color: #fff;
+    width: 31px;
+    height: 17px;
+    text-align: center;
+    margin-right: 3px;
+    margin-top: -22px;
+    float: right; 
+    transition: background-color 0.3s ease;
+}
+
+.titleclosebtn:hover { 
+    background-position:-12px -17px;
+
+}
+
+.titleclosebtn:active { 
+    background-position:-12px -34px;
+}
+.contel {
+    overflow:hidden;
+    background-color: #f8f8f8;
+
+}
+
+[data-simplebar] {
+    position: relative;
+    z-index: 0;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch
+
+}
+
+[data-simplebar=init] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden
+}
+
+.simplebar-scroll-content {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    min-width: 100%;
+    box-sizing: content-box;
+    padding-right:5px;
+}
+
+.simplebar-content {
+    margin-bottom: 20px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    box-sizing: border-box;
+    min-height: 100%
+}
+
+
+.simplebar-track {
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 11px;
+    background-color:#101a27;
+}
+
+.simplebar-scrollbar {
+    position: absolute;
+    right: 0px;
+    min-height: 10px;
+    width: 7px; 
+    background: #416985; 
+    background-clip: padding-box;
+}
+
+.simplebar-track:hover .simplebar-scrollbar {
+    background: #416985;
+}
+
+.simplebar-track .simplebar-scrollbar.visible {
+    background: #355d78;
+}
+
+.simplebar-track.horizontal {
+    left: 0;
+    width: auto;
+    height: 11px;
+
+}
+
+.simplebar-track.vertical {
+    top: 0
+}
+
+.horizontal.simplebar-track .simplebar-scrollbar {
+    right: auto;
+    top: 2px;
+    height: 7px;
+    min-height: 0;
+    min-width: 10px;
+    width: auto
+}
+
+simplebar-track{
+    visibility: hidden;
+}
+.scroll{   
+    overflow: hidden;
+
+    overflow-y: auto;
+    margin-right: 5px;
+}
+
+
+
+
+
+
+
+
+.mCustomScrollbar{ -ms-touch-action: pinch-zoom; touch-action: pinch-zoom; /* direct pointer events to js */ }
+.mCustomScrollbar.mCS_no_scrollbar, .mCustomScrollbar.mCS_touch_action{ -ms-touch-action: auto; touch-action: auto; }
+
+.mCustomScrollBox{ /* contains plugin's markup */
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    max-width: 100%;
+    outline: none;
+    direction: ltr;
+}
+
+.mCSB_container{ /* contains the original content */
+    overflow: hidden;
+    width: auto;
+    height: auto;
+}
+
+
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+2. VERTICAL SCROLLBAR 
+y-axis
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+.mCSB_inside > .mCSB_container{ margin-right: 20px; }
+
+.mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden{ margin-right: 0; } /* non-visible scrollbar */
+
+.mCS-dir-rtl > .mCSB_inside > .mCSB_container{ /* RTL direction/left-side scrollbar */
+    margin-right: 0;
+    margin-left: 30px;
+}
+
+.mCS-dir-rtl > .mCSB_inside > .mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden{ margin-left: 0; } /* RTL direction/left-side scrollbar */
+
+.mCSB_scrollTools{ /* contains scrollbar markup (draggable element, dragger rail, buttons etc.) */
+    position: absolute;
+    width: 16px;
+    height: auto;
+    left: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.mCSB_outside + .mCSB_scrollTools{ right: -26px; } /* scrollbar position: outside */
+
+.mCS-dir-rtl > .mCSB_inside > .mCSB_scrollTools, 
+.mCS-dir-rtl > .mCSB_outside + .mCSB_scrollTools{ /* RTL direction/left-side scrollbar */
+    right: auto;
+    left: 0;
+}
+
+.mCS-dir-rtl > .mCSB_outside + .mCSB_scrollTools{ left: -26px; } /* RTL direction/left-side scrollbar (scrollbar position: outside) */
+
+.mCSB_scrollTools .mCSB_draggerContainer{ /* contains the draggable element and dragger rail markup */
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; 
+    height: auto;
+}
+
+.mCSB_scrollTools a + .mCSB_draggerContainer{ margin: 20px 0; }
+
+.mCSB_scrollTools .mCSB_draggerRail{
+    width: 2px;
+    height: 100%;
+    margin: 0 auto;
+
+}
+
+.mCSB_scrollTools .mCSB_dragger{ /* the draggable element */
+
+    width: 100%;
+    height: 30px; /* minimum dragger height */
+    z-index: 1;
+}
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ /* the dragger element */
+    position: relative;
+    width: 4px;
+    height: 100%;
+    margin: 0 auto;
+    -webkit-border-radius: 16px; -moz-border-radius: 16px; border-radius: 16px;
+    text-align: center;
+}
+
+.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, 
+.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{ width: 12px; /* auto-expanded scrollbar */ }
+
+.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, 
+.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{ width: 8px; /* auto-expanded scrollbar */ }
+
+.mCSB_scrollTools .mCSB_buttonUp,
+.mCSB_scrollTools .mCSB_buttonDown{
+    display: block;
+    position: absolute;
+    height: 20px;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.mCSB_scrollTools .mCSB_buttonDown{ bottom: 0; }
+
+
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+3. HORIZONTAL SCROLLBAR 
+x-axis
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+.mCSB_horizontal.mCSB_inside > .mCSB_container{
+    margin-right: 0;
+    margin-bottom: 30px;
+}
+
+.mCSB_horizontal.mCSB_outside > .mCSB_container{ min-height: 100%; }
+
+.mCSB_horizontal > .mCSB_container.mCS_no_scrollbar_x.mCS_x_hidden{ margin-bottom: 0; } /* non-visible scrollbar */
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal{
+    width: auto;
+    height: 16px;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.mCustomScrollBox + .mCSB_scrollTools.mCSB_scrollTools_horizontal,
+.mCustomScrollBox + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal{ bottom: -26px; } /* scrollbar position: outside */
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal a + .mCSB_draggerContainer{ margin: 0 20px; }
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail{
+    width: 100%;
+    height: 2px;
+    margin: 7px 0;
+}
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger{
+    width: 30px; /* minimum dragger width */
+    height: 100%;
+    left: 0;
+}
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{
+    width: 100%;
+    height: 4px;
+    margin: 6px auto;
+}
+
+.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, 
+.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{
+    height: 12px; /* auto-expanded scrollbar */
+    margin: 2px auto;
+}
+
+.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, 
+.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{
+    height: 8px; /* auto-expanded scrollbar */
+    margin: 4px 0;
+}
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft,
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight{
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft{ left: 0; }
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight{ right: 0; }
+
+
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+4. VERTICAL AND HORIZONTAL SCROLLBARS 
+yx-axis 
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+.mCSB_container_wrapper{
+    position: absolute;
+    height: auto;
+    width: auto;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.mCSB_container_wrapper > .mCSB_container{
+    padding-right: 30px;
+    padding-bottom: 30px;
+    -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+}
+
+.mCSB_vertical_horizontal > .mCSB_scrollTools.mCSB_scrollTools_vertical{ bottom: 20px; }
+
+.mCSB_vertical_horizontal > .mCSB_scrollTools.mCSB_scrollTools_horizontal{ right: 20px; }
+
+/* non-visible horizontal scrollbar */
+.mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden + .mCSB_scrollTools.mCSB_scrollTools_vertical{ bottom: 0; }
+
+/* non-visible vertical scrollbar/RTL direction/left-side scrollbar */
+.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden + .mCSB_scrollTools ~ .mCSB_scrollTools.mCSB_scrollTools_horizontal, 
+.mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_scrollTools.mCSB_scrollTools_horizontal{ right: 0; }
+
+/* RTL direction/left-side scrollbar */
+.mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_scrollTools.mCSB_scrollTools_horizontal{ left: 20px; }
+
+/* non-visible scrollbar/RTL direction/left-side scrollbar */
+.mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden + .mCSB_scrollTools ~ .mCSB_scrollTools.mCSB_scrollTools_horizontal{ left: 0; }
+
+.mCS-dir-rtl > .mCSB_inside > .mCSB_container_wrapper{ /* RTL direction/left-side scrollbar */
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden > .mCSB_container{ padding-right: 0; }
+
+.mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden > .mCSB_container{ padding-bottom: 0; }
+
+.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden{
+    margin-right: 0; /* non-visible scrollbar */
+    margin-left: 0;
+}
+
+/* non-visible horizontal scrollbar */
+.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden{ margin-bottom: 0; }
+
+
+
+
+
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+6. SCROLLBAR COLORS, OPACITY AND BACKGROUNDS  
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+/* 
+----------------------------------------
+6.1 THEMES 
+----------------------------------------
+*/
+
+/* default theme ("light") */
+
+.mCSB_scrollTools{   }
+
+.mCS-autoHide > .mCustomScrollBox > .mCSB_scrollTools,
+.mCS-autoHide > .mCustomScrollBox ~ .mCSB_scrollTools{  }
+
+.mCustomScrollbar > .mCustomScrollBox > .mCSB_scrollTools.mCSB_scrollTools_onDrag,
+.mCustomScrollbar > .mCustomScrollBox ~ .mCSB_scrollTools.mCSB_scrollTools_onDrag,
+.mCustomScrollBox:hover > .mCSB_scrollTools,
+.mCustomScrollBox:hover ~ .mCSB_scrollTools,
+.mCS-autoHide:hover > .mCustomScrollBox > .mCSB_scrollTools,
+.mCS-autoHide:hover > .mCustomScrollBox ~ .mCSB_scrollTools{   }
+
+.mCSB_scrollTools .mCSB_draggerRail{
+    background-color: #ddd; /*TRACK*/
+    border-radius: 0px;
+    width:9px;
+}
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+    background-color: #989898;  /*BAR IDLE*/ 
+    border-radius: 0px;
+    width:9px;
+}
+
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{
+    background-color: #a93f18; /*BAR HOVER*/   
+}
+.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
+    background-color: #989898; /*PRESS + DRAG*/   
+}
+
+.mCSB_scrollTools .mCSB_buttonUp,
+.mCSB_scrollTools .mCSB_buttonDown,
+.mCSB_scrollTools .mCSB_buttonLeft,
+.mCSB_scrollTools .mCSB_buttonRight{
+
+}
+
+.mCSB_scrollTools .mCSB_buttonUp{
+
+}
+
+.mCSB_scrollTools .mCSB_buttonDown{
+
+}
+
+.mCSB_scrollTools .mCSB_buttonLeft{
+
+}
+
+.mCSB_scrollTools .mCSB_buttonRight{
+
+}
+
+.mCSB_scrollTools .mCSB_buttonUp:hover,
+.mCSB_scrollTools .mCSB_buttonDown:hover,
+.mCSB_scrollTools .mCSB_buttonLeft:hover,
+.mCSB_scrollTools .mCSB_buttonRight:hover{   }
+
+.mCSB_scrollTools .mCSB_buttonUp:active,
+.mCSB_scrollTools .mCSB_buttonDown:active,
+.mCSB_scrollTools .mCSB_buttonLeft:active,
+.mCSB_scrollTools .mCSB_buttonRight:active{  }
